@@ -28,7 +28,7 @@ class InputWidget extends StatelessWidget {
           Text(
             label,
             style: theme.style.captionRegular14.copyWith(
-              color: theme.palette.caption,
+              color: error.isEmpty ? theme.palette.caption : theme.palette.error,
             ),
           ),
         TextField(
@@ -65,7 +65,7 @@ class InputWidget extends StatelessWidget {
         ),
         if (error.isNotEmpty)
           Text(
-            label,
+            error,
             style: theme.style.captionRegular14.copyWith(
               color: theme.palette.error,
             ),

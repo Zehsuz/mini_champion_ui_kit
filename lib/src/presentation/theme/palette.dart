@@ -11,6 +11,9 @@ abstract class Palette{
   abstract Color placeholder;
   abstract Color inputIcon;
   abstract Color cardStroke;
+  abstract Color black;
+  abstract Color white;
+
 }
 
 class LightPalette extends Palette{
@@ -43,4 +46,10 @@ class LightPalette extends Palette{
 
   @override
   Color success = Color(0xFF00B712);
+
+  @override
+  Color black = Color(0xFF000000);
+
+  @override
+  Color white = Color(0xFFFFFFFF);
 }

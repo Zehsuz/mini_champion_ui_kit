@@ -14,4 +14,32 @@ class Style {
     height: 17 / 24,
     letterSpacing: 0,
   );
+  TextStyle get textRegular15 => TextStyle(
+    fontWeight: FontWeight.w400,
+    color: palette.black,
+    fontSize: 15.sp,
+    height: 15 / 20,
+    letterSpacing: 0,
+  );
+  TextStyle get captionRegular14 => TextStyle(
+    fontWeight: FontWeight.w400,
+    color: palette.black,
+    fontSize: 14.sp,
+    height: 14 / 20,
+    letterSpacing: 0,
+  );
+  TextStyle get title1Heavy14 => TextStyle(
+    fontWeight: FontWeight.w700,
+    color: palette.black,
+    fontSize: 24.sp,
+    height: 24 / 28,
+    letterSpacing: 0,
+  );
+  TextStyle get title3Medium17  => TextStyle(
+    fontWeight: FontWeight.w500,
+    color: palette.black,
+    fontSize:17.sp,
+    height: 17 / 24,
+    letterSpacing: 0,
+  );
 }

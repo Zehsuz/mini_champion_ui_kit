@@ -13,6 +13,8 @@ abstract class Palette{
   abstract Color cardStroke;
   abstract Color black;
   abstract Color white;
+  abstract Color caption;
+
 
 }
 
@@ -52,4 +54,7 @@ class LightPalette extends Palette{
 
   @override
   Color white = Color(0xFFFFFFFF);
+
+  @override
+  Color caption = Color(0xFF939396);
 }

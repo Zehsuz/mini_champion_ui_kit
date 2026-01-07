@@ -51,7 +51,7 @@ class InputWidget extends StatelessWidget {
                     ? theme.palette.error
                     : (label.isEmpty && controller.text.isNotEmpty)
                     ? theme.palette.inputIcon
-                    : theme.palette.input_bg,
+                    : theme.palette.input_stroke,
               ),
             ),
             focusedBorder: OutlineInputBorder(

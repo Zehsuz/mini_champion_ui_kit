@@ -42,6 +42,7 @@ abstract class BaseButtonWidget extends StatelessWidget {
       child: FilledButton(
         onPressed: onTap,
         style: FilledButton.styleFrom(
+          padding: padding,
           disabledBackgroundColor: disabledBackgroundColor,
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(
@@ -53,4 +54,61 @@ abstract class BaseButtonWidget extends StatelessWidget {
       ),
     );
   }
+}
+
+class BigButtonWidget extends BaseButtonWidget {
+  BigButtonWidget({
+    required super.backgroundColor,
+    required super.disabledBackgroundColor,
+    required super.strokeColor,
+    required super.textColor,
+    required super.text,
+    required super.onTap,
+    required super.theme,
+  });
+
+  @override
+  double get height => 56.h;
+
+  @override
+  EdgeInsets get padding =>
+      EdgeInsets.symmetric(vertical: 16.h, horizontal: 114.w);
+
+  @override
+  TextStyle get textStyle => theme.style.title3Semibold17;
+
+  @override
+  double? get width => 335.w;
+
+  BigButtonWidget.filled({super.key,
+    required super.text,
+    required super.onTap,
+    required super.theme,
+  }) : super (
+    backgroundColor: theme.palette.accent,
+    disabledBackgroundColor: theme.palette.accentInactive,
+    strokeColor: Colors.transparent,
+    textColor: theme.palette.white
+  );
+  BigButtonWidget.simple({super.key,
+    required super.text,
+    required super.onTap,
+    required super.theme,
+  }) : super (
+    backgroundColor: theme.palette.input_bg,
+    disabledBackgroundColor: theme.palette.accentInactive,
+    strokeColor: Colors.transparent,
+    textColor: theme.palette.black
+  );
+  BigButtonWidget.outline({super.key,
+    required super.text,
+    required super.onTap,
+    required super.theme,
+  }) : super (
+    backgroundColor: Colors.transparent,
+    disabledBackgroundColor: theme.palette.accentInactive,
+    strokeColor: theme.palette.accent,
+    textColor: theme.palette.accent,
+  );
+
 }

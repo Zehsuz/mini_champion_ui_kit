@@ -16,5 +16,5 @@ class CustomTheme extends ThemeExtension<CustomTheme> {
     double t,
   ) => this;
 
-  static CustomTheme of(context) => ThemeData().extension<CustomTheme>()!;
+  static CustomTheme of(context) => Theme.of(context).extension<CustomTheme>()!;
 }
